@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz with Feedback Sidebar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header-container">
+        <h1>Interactive Quiz</h1>
+    </header>
+
+    <div id="main-container">
+        <!-- Progress Bar -->
+        <div id="progress-bar-container">
+            <progress id="progress-bar" value="0" max="5"></progress>
+            <span id="progress-text">0 / 5</span>
+        </div>
+
+        <!-- Content Layout -->
+        <div id="content-container">
+            <!-- Quiz Container -->
+            <div id="quiz-container">
+                <!-- Question 1 - True/False -->
+                <div class="question" data-correct="true">
+                    <h2>Question 1</h2>
+                    <p>HTML stands for Hyper Text Markup Language.</p>
+                    <div class="option" onclick="selectAnswer(this, true)"> 
+                        <span class="circle">T</span> <span>True</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(this, false)"> 
+                        <span class="circle">F</span> <span>False</span>
+                    </div>
+                </div>
+
+                <!-- Question 2 - True/False -->
+                <div class="question" data-correct="true">
+                    <h2>Question 2</h2>
+                    <p>CSS stands for Cascading Style Sheets.</p>
+                    <div class="option" onclick="selectAnswer(this, true)">
+                        <span class="circle">T</span> <span>True</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(this, false)">
+                        <span class="circle">F</span> <span>False</span>
+                    </div>
+                </div>
+
+                <!-- Question 3 - Multiple Choice -->
+                <div class="question" data-correct="true">
+                    <h2>Question 3</h2>
+                    <p>Which of these is a programming language?</p>
+                    <div class="option" onclick="selectAnswer(this, false)">
+                        <span>A</span> <span>HTML</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(this, true)">
+                        <span>B</span> <span>JavaScript</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(this, false)">
+                        <span>C</span> <span>CSS</span>
+                    </div>
+                </div>
+
+                <!-- Question 4 - Multiple Choice -->
+                <div class="question" data-correct="true">
+                    <h2>Question 4</h2>
+                    <p>Which of the following is used to style web pages?</p>
+                    <div class="option" onclick="selectAnswer(this, true)">
+                        <span>A</span> <span>CSS</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(this, false)">
+                        <span>B</span> <span>Python</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(this, false)">
+                        <span>C</span> <span>Java</span>
+                    </div>
+                </div>
+
+                <!-- Question 5 - Multiple Choice -->
+                <div class="question" data-correct="true">
+                    <h2>Question 5</h2>
+                    <p>Who is known as the father of the World Wide Web?</p>
+                    <div class="option" onclick="selectAnswer(this, false)">
+                        <span>A</span> <span>Bill Gates</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(this, true)">
+                        <span>B</span> <span>Tim Berners-Lee</span>
+                    </div>
+                    <div class="option" onclick="selectAnswer(this, false)">
+                        <span>C</span> <span>Steve Jobs</span>
+                    </div>
+                </div>
+
+                <!-- Final Result Display -->
+                <div id="result" class="feedback"></div>
+            </div>
+
+            <!-- Feedback Sidebar -->
+            <aside id="feedback-sidebar">
+                <h3>Your Feedback</h3>
+                <textarea id="feedback-box" placeholder="Enter feedback here..."></textarea>
+                <button onclick="submitFeedback()">Submit Feedback</button>
+            </aside>
+        </div>
+        <div class="footer">
+            <p> Interactive Quiz</p>
+            <p>2024 CPAN 134 0ND</p>
+            <p>Contact: <a href="n01630199@humber.ca">n01630199@humber.ca</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
